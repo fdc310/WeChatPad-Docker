@@ -73,7 +73,9 @@ WeChatPadPro 适用于个人微信增强、运营管理和自动化交互，提�
 
 
 ---
-
+## 详细的api文档
+如果要尝试调用，请查阅以下文档
+[wechatpadproAPI文档](https://doc.apipost.net/docs/460ada21e884000?locale=zh-cn  )
 
 
 
@@ -85,7 +87,8 @@ docker compose up -d
 # or
 docker-compose up -d
 ```
-> dockercompose中密码等配置应与setting一致
+> dockercompose中的mysql和redis密码等配置应与setting.json一致
+> app/assets/setting.json
 
 
 ## 软件配置

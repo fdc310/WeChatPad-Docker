@@ -38,9 +38,9 @@ services:
     image: redis:alpine
     container_name: redis_wxpad
     restart: unless-stopped
-    command: redis-server --requirepass testredis
+    command: redis-server --requirepass test_redis
     environment:
-      - REDIS_PASSWORD=testredis
+      - REDIS_PASSWORD=test_redis
     volumes:
       - ./redis/data:/data
     ports:
@@ -48,7 +48,7 @@ services:
     networks:
       - wechatpadpro_network
     healthcheck:
-      test: ["CMD", "redis-cli", "-a", "testredis", "ping"]
+      test: ["CMD", "redis-cli", "-a", "test_redis", "ping"]
       interval: 5s
       timeout: 3s
       retries: 5
