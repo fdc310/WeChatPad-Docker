@@ -317,16 +317,65 @@ definitions:
     type: object
   DeviceInfo:
     properties:
-      AndroidId:
+      AdSource:
         example: ""
         type: string
-      ImeI:
+      BundleID:
         example: ""
         type: string
-      Manufacturer:
+      CarrierName:
         example: ""
         type: string
-      Model:
+      ClientCheckDataXML:
+        example: ""
+        type: string
+      CoreCount:
+        format: uint32
+        type: integer
+      DeviceBrand:
+        example: ""
+        type: string
+      DeviceID:
+        items:
+          format: int
+          type: integer
+        type: array
+      DeviceName:
+        example: ""
+        type: string
+      DeviceToken:
+        $ref: '#/definitions/wechat.TrustResp'
+      GUID2:
+        example: ""
+        type: string
+      Imei:
+        example: ""
+        type: string
+      IphoneVer:
+        example: ""
+        type: string
+      Language:
+        example: ""
+        type: string
+      OsType:
+        example: ""
+        type: string
+      OsTypeNumber:
+        example: ""
+        type: string
+      RealCountry:
+        example: ""
+        type: string
+      SoftTypeXML:
+        example: ""
+        type: string
+      TimeZone:
+        example: ""
+        type: string
+      UUIDOne:
+        example: ""
+        type: string
+      UUIDTwo:
         example: ""
         type: string
     title: DeviceInfo
@@ -1882,6 +1931,229 @@ definitions:
         type: integer
     title: WxFunctionSwitchModel
     type: object
+  baseinfo.AlgorithmInfo:
+    properties:
+      BlockSize:
+        description: ' 块大小'
+        format: uint32
+        type: integer
+      Certificate:
+        description: ' 证书'
+        items:
+          format: int
+          type: integer
+        type: array
+      DeviceToken:
+        $ref: '#/definitions/wechat.TrustResp'
+        description: ' 设备令牌'
+      EncryptionType:
+        description: ' 加密类型'
+        example: ""
+        type: string
+      Hash:
+        description: ' 算法哈希'
+        example: ""
+        type: string
+      IV:
+        description: ' 算法IV'
+        items:
+          format: int
+          type: integer
+        type: array
+      Iterations:
+        description: ' 迭代次数'
+        format: uint32
+        type: integer
+      Key:
+        description: ' 算法密钥'
+        items:
+          format: int
+          type: integer
+        type: array
+      KeyLength:
+        description: ' 密钥长度'
+        format: uint32
+        type: integer
+      Mode:
+        description: ' 加密模式'
+        example: ""
+        type: string
+      Padding:
+        description: ' 填充方式'
+        example: ""
+        type: string
+      PrivateKey:
+        description: ' 私钥'
+        items:
+          format: int
+          type: integer
+        type: array
+      PublicKey:
+        description: ' 公钥'
+        items:
+          format: int
+          type: integer
+        type: array
+      Salt:
+        description: ' 算法盐值'
+        items:
+          format: int
+          type: integer
+        type: array
+      SignatureType:
+        description: ' 签名类型'
+        example: ""
+        type: string
+      TrustChain:
+        description: ' 信任链'
+        items:
+          format: int
+          type: integer
+        type: array
+      Type:
+        description: ' 算法类型'
+        example: ""
+        type: string
+      Version:
+        description: ' 算法版本'
+        example: ""
+        type: string
+    title: baseinfo.AlgorithmInfo
+    type: object
+  baseinfo.DeviceInfo:
+    properties:
+      AdSource:
+        description: ' 广告来源'
+        example: ""
+        type: string
+      BaseLibVersion:
+        description: ' 基础库版本'
+        example: ""
+        type: string
+      BundleID:
+        description: ' 包ID'
+        example: ""
+        type: string
+      CarrierName:
+        description: ' 运营商名称'
+        example: ""
+        type: string
+      ClientCheckDataXML:
+        description: ' 客户端检查数据XML'
+        example: ""
+        type: string
+      ClientVersion:
+        description: ' 客户端版本'
+        example: ""
+        type: string
+      CoreCount:
+        description: ' CPU核心数'
+        format: uint32
+        type: integer
+      DPI:
+        description: ' 屏幕DPI'
+        format: uint32
+        type: integer
+      DeviceBrand:
+        description: ' 设备品牌'
+        example: ""
+        type: string
+      DeviceID:
+        description: ' 设备ID'
+        items:
+          format: int
+          type: integer
+        type: array
+      DeviceModel:
+        description: ' 设备型号'
+        example: ""
+        type: string
+      DeviceName:
+        description: ' 设备名称'
+        example: ""
+        type: string
+      DeviceType:
+        description: ' 设备类型'
+        example: ""
+        type: string
+      GUID2:
+        description: ' GUID2'
+        example: ""
+        type: string
+      H5Version:
+        description: ' H5版本'
+        example: ""
+        type: string
+      Imei:
+        description: ' IMEI'
+        example: ""
+        type: string
+      IphoneVer:
+        description: ' iOS版本'
+        example: ""
+        type: string
+      Language:
+        description: ' 语言'
+        example: ""
+        type: string
+      LiteAppVersion:
+        description: ' 轻应用版本'
+        example: ""
+        type: string
+      MacAddress:
+        description: ' MAC地址'
+        example: ""
+        type: string
+      NetworkType:
+        description: ' 网络类型'
+        example: ""
+        type: string
+      OsType:
+        description: ' 系统类型'
+        example: ""
+        type: string
+      OsTypeNumber:
+        description: ' 系统版本号'
+        example: ""
+        type: string
+      RealCountry:
+        description: ' 国家'
+        example: ""
+        type: string
+      ScreenHeight:
+        description: ' 屏幕高度'
+        format: uint32
+        type: integer
+      ScreenWidth:
+        description: ' 屏幕宽度'
+        format: uint32
+        type: integer
+      SoftTypeXML:
+        description: ' 软件类型XML'
+        example: ""
+        type: string
+      TimeZone:
+        description: ' 时区'
+        example: ""
+        type: string
+      UUIDOne:
+        description: ' UUID1'
+        example: ""
+        type: string
+      UUIDTwo:
+        description: ' UUID2'
+        example: ""
+        type: string
+      WifiBSSID:
+        description: ' WiFi BSSID'
+        example: ""
+        type: string
+      WifiSSID:
+        description: ' WiFi SSID'
+        example: ""
+        type: string
+    title: baseinfo.DeviceInfo
+    type: object
   baseinfo.Location:
     properties:
       City:
@@ -1907,6 +2179,66 @@ definitions:
         type: string
     title: baseinfo.Location
     type: object
+  baseinfo.SecurityInfo:
+    properties:
+      AlgorithmInfo:
+        $ref: '#/definitions/AlgorithmInfo'
+        description: ' 算法信息'
+      DecryptedData:
+        description: ' 解密数据'
+        items:
+          format: int
+          type: integer
+        type: array
+      DeviceInfo:
+        $ref: '#/definitions/DeviceInfo'
+        description: ' 设备信息'
+      EncryptedData:
+        description: ' 加密数据'
+        items:
+          format: int
+          type: integer
+        type: array
+      LastUpdateTime:
+        description: ' 最后更新时间'
+        format: uint64
+        type: integer
+      SecurityLevel:
+        description: ' 安全等级'
+        format: uint32
+        type: integer
+      SessionExpireTime:
+        description: ' 会话过期时间'
+        format: uint64
+        type: integer
+      SessionID:
+        description: ' 会话ID'
+        example: ""
+        type: string
+      SessionKey:
+        description: ' 会话密钥'
+        items:
+          format: int
+          type: integer
+        type: array
+      Signature:
+        description: ' 签名'
+        items:
+          format: int
+          type: integer
+        type: array
+      TrustStatus:
+        description: ' 信任状态'
+        format: uint32
+        type: integer
+      VerifyData:
+        description: ' 验证数据'
+        items:
+          format: int
+          type: integer
+        type: array
+    title: baseinfo.SecurityInfo
+    type: object
   baseinfo.UserLabelInfoItem:
     properties:
       LabelIDList:
@@ -1917,10 +2249,52 @@ definitions:
         type: string
     title: baseinfo.UserLabelInfoItem
     type: object
+  wechat.TrustResp:
+    properties:
+      BaseResponse:
+        $ref: '#/definitions/BaseResponse'
+        description: ' 基础响应'
+      TrustResponseData:
+        $ref: '#/definitions/TrustResponseData'
+        description: ' 信任响应数据'
+    title: wechat.TrustResp
+    type: object
+  wechat.TrustResponseData:
+    properties:
+      DeviceToken:
+        description: ' 设备令牌'
+        example: ""
+        type: string
+      SoftData:
+        $ref: '#/definitions/TrustSoftData'
+        description: ' 软件数据'
+      Timestamp:
+        description: ' 时间戳'
+        format: uint64
+        type: integer
+    title: wechat.TrustResponseData
+    type: object
+  wechat.TrustSoftData:
+    properties:
+      SoftConfig:
+        description: ' 软件配置'
+        example: ""
+        type: string
+      SoftData:
+        description: ' 软件数据'
+        items:
+          format: int
+          type: integer
+        type: array
+    title: wechat.TrustSoftData
+    type: object
 info:
   contact: ""
-  description: WeChat-iPad-8053 iOS17.5.1 最新修订版 WEB-API(支持长链接、自动心跳、自动二次登录、重启API服务自动登录)
-  title: ipad-8053 iOS17.5.1 最新修订版
+  description: |-
+    WeChatPadPro-8059 iOS18.3.2 mcp服务器版 mcp地址 http://wxmcp.knowhub.cloud/ (完美兼容mcp服务MCP模型上下文协议，提供LLM与外部系统的标准化交互接口支持长链接、自动心跳、自动二次登录、重启API服务自动登录，开源生态：兼容HuggingFace/OpenAI等主流模型平台)
+
+    服务已启动(SSE模式)，访问地址: http://localhost:8099
+  title: WeChatPadPro-8059 iOS18.3.2 最新修订mcp服务器版（SSE模式）
   version: 仅供学习交流使用，禁止用于非法用途
 paths:
   /admin/DelayAuthKey:
@@ -3670,6 +4044,19 @@ paths:
         "200":
           description: ""
       summary: 获取步数排行数据列表
+      tags:
+      - 其他
+  /other/RedisMemory:
+    get:
+      parameters:
+      - description: 账号唯一标识
+        in: query
+        name: key
+        type: string
+      responses:
+        "200":
+          description: ""
+      summary: 内存管理
       tags:
       - 其他
   /other/UpdateStepNumber:
